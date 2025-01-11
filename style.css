@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  text-align: center; /* Ensure text is centered */
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.upload-box {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="file"] {
+  padding: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.image-container {
+  max-width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  margin: 20px auto;
+  position: relative;
+}
+
+#cropImage {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#cropIcon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px; /* Smaller padding for the crop button */
+  font-size: 1.2rem; /* Smaller font size */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#cropIcon:hover {
+  background-color: #8cadd0;
+}
+
+button {
+  padding: 20px 40px; /* Smaller button size */
+  background-color: #618fbf;
+  color: white; /* White text */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem; /* Smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 20px;
+}
+
+button:disabled {
+  background-color: #ffffff;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #a7bfd8;
+}
+
+.preview {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    padding: 18px 30px; /* Adjusted padding for medium screens */
+    font-size: 1.1rem; /* Slightly larger font for better readability */
+  }
+
+  #cropIcon {
+    bottom: 10px;
+    right: 10px;
+    padding: 5px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  input[type="file"] {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 15px 30px; /* Adjusted padding for smaller screens */
+  }
+
+  #cropIcon {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+  }
+
+  .preview {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+}

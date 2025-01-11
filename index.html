@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="upload.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Text Extraction</h2>
+        <div class="upload-box">
+          <input type="file" id="imageInput" accept="image/*">
+        </div>
+        <div class="image-container" id="imageContainer" style="display: none;">
+          <img id="cropImage" alt="Selected Image">
+          <button id="cropIcon" style="display: none;" title="Crop Image">
+            <img src="crop-icon.png" alt="Crop Icon">
+          </button>
+        </div>
+        <button id="extractBtn" disabled>Extract Text</button>
+        <div class="preview" id="preview"></div>
+    </div>
+    <script src="upload.js" defer></script>
+
+    
+</body>
+</html>
